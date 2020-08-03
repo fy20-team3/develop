@@ -20,7 +20,7 @@ from msrest.authentication import CognitiveServicesCredentials
 from azure.cognitiveservices.vision.face.models import TrainingStatusType, Person, SnapshotObjectType, OperationStatusType
 
 def index(request):
-    return render(request, 'myhello/index.html')
+    return render(request, 'face_r/index.html')
 
 #def photoin(request):
 #    return render(request, '')
@@ -78,7 +78,7 @@ def scan(request):
                                #passwd=db_config['passwd'], charset=db_config['charset'])
     place = '北海道札幌市'
 
-    return render(request, 'myhello/Scan.html', {'pcode': pcode, 'place': place})
+    return render(request, 'face_r/scan.html', {'pcode': pcode, 'place': place})
 
 def dbtest(request):
     #return HttpResponse('dbtest 始まるよ')
